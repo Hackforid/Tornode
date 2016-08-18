@@ -66,26 +66,7 @@ class RequestHandler {
                 response._end(data, encoding, callback);
             }
 
-            switch(request.method) {
-                case 'GET':
-                    handler.get();
-                    break;
-                case 'POST':
-                    handler.post();
-                    break;
-                case 'PUT':
-                    handler.put();
-                    break;
-                case 'DELETE':
-                    handler.delete();
-                    break;
-                case 'PATCH':
-                    handler.patch();
-                    break;
-                case 'OPTIONS':
-                    handler.options();
-                    break;
-            }
+            handler[request.method.toLowerCase()]();
         }
 
 
