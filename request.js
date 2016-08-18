@@ -15,17 +15,29 @@ class RequestHandler {
     onFinish() {
     }
 
-    get() {}
+    get() {
+        this.res.end(403)
+    }
 
-    post() {}
+    post() {
+        this.res.end(403)
+    }
 
-    put() {}
+    put() {
+        this.res.end(403)
+    }
 
-    delete() {}
+    delete() {
+        this.res.end(403)
+    }
 
-    patch() {}
+    patch() {
+        this.res.end(403)
+    }
 
-    options() {}
+    options() {
+        this.res.end(403)
+    }
 
     onException(e) {
         this.response._end();
